@@ -22,7 +22,7 @@ The aim of this guide is to help developers in writing clean, concise, beautiful
         - [Semantics](#semantics)
     - [Dependencies](#dependencies)
         - [Import Statements](#import-statements)
-    - [Declaration Order](#declaration-order)
+    - [Declaration Order](#declaration)
 - [Best Practices](#best-practices)
     - [Comments](#comments)
     - [Protection from Dynamism](#protection-from-dynamism)
@@ -38,16 +38,17 @@ The aim of this guide is to help developers in writing clean, concise, beautiful
 
 ### Semicolons
 
-#### Trailing semicolons (`;`) are not nessesary any more. This is Swift*
+#### Trailing semicolons (`;`) are not nessesary any more. 
+*This is Swift*
 
-**Preferred**
+- Preferred
 ```swift
 self.backgroundColor = UIColor.whiteColor()
 self.completion = { 
     // ...
 }
 ```
-**Not preferred**
+- Not Preferred
 ```swift
 self.backgroundColor = UIColor.whiteColor();
 self.completion = { 
@@ -66,14 +67,14 @@ Tab setting could be set at Xcode's **Text Editing** settings. As following:
 #### All source files should end with a single trailing newline (only).
 *This prevents no-trailing-newline errors and reduces noise in commit diffs.*
 
-**Preferred**
+- Preferred
 ```swift
 class Button {
   // ...
 }
 // <-- One line here
 ```
-**Not preferred**
+- Not Preferred
 ```swift
 class Button {
   // ...
@@ -91,7 +92,7 @@ class Button {
 #### All functions should be at least one empty line apart each other.
 *Gives breathing room between code blocks.*
 
-**Preferred**
+- Preferred
 ```swift
 class BaseViewController: UIViewController {
     // ...
@@ -110,7 +111,7 @@ class BaseViewController: UIViewController {
 #### Use single spaces around operator definitions and operator calls.
 *Readability*
 
-**Preferred**
+- Preferred
 ```swift
 func <| (lhs: Int, rhs: Int) -> Int {
     // ...
@@ -118,7 +119,7 @@ func <| (lhs: Int, rhs: Int) -> Int {
 
 let value = 1 <| 2
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 func <|(lhs: Int, rhs: Int) -> Int {
     // ...
@@ -131,13 +132,13 @@ let value = 1<|2
 #### Use single spaces around return arrows (`->`) both in functions and in closures.
 *Readability*
 
-**Preferred**
+- Preferred
 ```swift
 func doSomething(value: Int) -> Int {
     // ...
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 func doSomething(value: Int)->Int {
     // ...
@@ -150,7 +151,7 @@ func doSomething(value: Int)->Int {
 #### Commas (`,`) should have no whitespace before it, and should have either one space or one newline after.
 *Keeps comma-separated items visually separate.*
 
-**Preferred**
+- Preferred
 ```swift
 let array = [1, 2, 3]
 ```
@@ -161,7 +162,7 @@ self.presentViewController(
     completion: nil
 )
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 let array = [1,2,3]
 let array = [1 ,2 ,3]
@@ -180,14 +181,14 @@ self.presentViewController(
 #### Colons (`:`) used to indicate type should have one space after it and should have no whitespace before it.
 *The colon describes the object to its left, not the right.*
 
-**Preferred**
+- Preferred
 ```swift
 func createItem(item: Item)
 ```
 ```swift
 var item: Item? = nil
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 func createItem(item:Item)
 func createItem(item :Item)
@@ -203,7 +204,7 @@ var item : Item? = nil
 #### Colons (`:`) for `case` statements should have no whitespace before it, and should have either one space or one newline after it.
 *Same as he previous rule, the colon describes the object to its left, not the right.*
 
-**Preferred**
+- Preferred
 ```swift
 switch result {
 
@@ -214,7 +215,7 @@ case .Failure:
     self.failure()
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 switch result {
 
@@ -231,7 +232,7 @@ case .Failure:self.reportError()
 #### Open braces (`{`) should be one space following the previous non-whitespace character.
 *Separates the brace from the declaration.*
 
-**Preferred**
+- Preferred
 ```swift
 class Icon {
     // ...
@@ -242,7 +243,7 @@ let block = { () -> Void in
     // ...
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 class Icon{
     // ...
@@ -258,7 +259,7 @@ let block ={ () -> Void in
 #### Open braces (`{`) for type declarations, functions, and closures should be followed by one empty line. Single-statement closures can be written in one line.
 *Gives breathing room when scanning for code.*
 
-**Preferred**
+- Preferred
 ```swift
 class Icon {
 
@@ -277,7 +278,7 @@ class Icon {
     }
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 class Icon {
     let image: UIImage
@@ -295,7 +296,7 @@ class Icon {
 #### Empty declarations should be written in empty braces (`{}`), otherwise a comment should indicate the reason for the empty implementation.
 *Makes it clear that the declaration was meant to be empty and not just a missing `TODO`.*
 
-**Preferred**
+- Preferred
 ```swift
 extension Icon: Equatable {}
 ```
@@ -309,7 +310,7 @@ override func drawRect(rect: CGRect) {}
     // do nothing; delegate method required to enable tracking mode
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 extension Icon: Equatable {
 }
@@ -328,7 +329,7 @@ override func drawRect(rect: CGRect) {
 #### Close braces (`}`) should not have empty lines before it. For single line expressions enclosed in braces, there should be one space between the last statement and the closing brace.
 *Provides breathing room between declarations while keeping code compact.*
 
-**Preferred**
+- Preferred
 ```swift
 class Button {
 
@@ -340,7 +341,7 @@ class Button {
     }
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 class Button {
 
@@ -359,7 +360,7 @@ class Button {
 #### Close braces (`}`) unless on the same line as its corresponding open brace (`{`), should be left-aligned with the statement that declared the open brace.
 *Close braces left-aligned with their opening statements visually express their scopes pretty well. This rule is the basis for the succeeding formatting guidelines below.*
 
-**Preferred**
+- Preferred
 ```swift
 lazy var largeImage: UIImage = { () -> UIImage in
 
@@ -367,7 +368,7 @@ lazy var largeImage: UIImage = { () -> UIImage in
     return image
 }()
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 lazy var largeImage: UIImage = { () -> UIImage in
 
@@ -382,7 +383,7 @@ lazy var largeImage: UIImage = { () -> UIImage in
 #### The `get` and `set` statement and their close braces (`}`) should all be left-aligned. If the statement in the braces can be expressed in a single line, the `get` and `set` declaration can be inlined.
 *Combined with the [rules on braces](#braces), this formatting provides very good consistency and scannability.*
 
-**Preferred**
+- Preferred
 ```swift
 struct Rectangle {
 
@@ -411,7 +412,7 @@ struct Rectangle {
     }
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 struct Rectangle {
 
@@ -447,7 +448,7 @@ struct Rectangle {
 #### Read-only computed properties should ommit the `get` clause.
 *The `return` statement provides enough clarity that lets us use the more compact form.*
 
-**Preferred**
+- Preferred
 ```swift
 struct Rectangle {
 
@@ -458,7 +459,7 @@ struct Rectangle {
     }
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 struct Rectangle {
 
@@ -479,7 +480,7 @@ struct Rectangle {
 #### `if`, `else`, `switch`, `do`, `catch`, `repeat`, `guard`, `for`, `while`, and `defer` statements should be left-aligned with their respective close braces (`}`).
 *Combined with the [rules on braces](#braces), this formatting provides very good consistency and scannability. Close braces left-aligned with their respective control flow statements visually express their scopes pretty well.*
 
-**Preferred**
+- Preferred
 ```swift
 if array.isEmpty {
     // ...
@@ -497,7 +498,7 @@ if array.isEmpty {
 }
 ```
 *Personally, I like the second way*
-**Not Preferred**
+- Not Preferred
 ```swift
 if array.isEmpty
 {
@@ -513,7 +514,7 @@ else
 #### `case` statements should be left-aligned with the `switch` statement. Single-line `case` statements can be inlined and written compact. Multi-line `case` statements should be indented below `case:` and separated with one empty line.
 *Reliance on Xcode's auto-indentation. For multi-line statements, separating `case`s with empty lines enhance visual separation.*
 
-**Preferred**
+- Preferred
 ```swift
 switch result {
 
@@ -533,7 +534,7 @@ case .Success: self.doSomething()
 case .Failure: self.doSomethingElse()
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 switch result {
 
@@ -555,13 +556,13 @@ switch result {
 #### Conditions for `if`, `switch`, `for`, and `while` statements should not be enclosed in parentheses (`()`).
 *Do coding Swift way*
 
-**Preferred**
+- Preferred
 ```swift
 if array.isEmpty {
     // ...
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 if (array.isEmpty) {
     // ...
@@ -571,7 +572,7 @@ if (array.isEmpty) {
 #### Try to avoid nesting statements by `return`ing early when possible.
 *The more nested scopes to keep track of, the heavier the burden of scanning code.*
 
-**Preferred**
+- Preferred
 ```swift
 guard let strongSelf = self else {
 
@@ -579,7 +580,7 @@ guard let strongSelf = self else {
 }
 // do many things with strongSelf
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 if let strongSelf = self {
 
@@ -598,7 +599,7 @@ Naming rules are mostly based on Apple's naming conventions, since we'll end up 
 #### Type names (`class`, `struct`, `enum`, `protocol`) should be in *UpperCamelCase*. 
 *Adopt Apple's naming rules for uniformity.*
 
-**Preferred**
+- Preferred
 ```swift
 class ImageButton {
 
@@ -607,7 +608,7 @@ class ImageButton {
     }
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 class image_button {
 
@@ -621,7 +622,7 @@ class image_button {
 #### `enum` values and `OptionSetType` values should be in *UpperCamelCase*. 
 *Adopt Apple's naming rules for uniformity.*
 
-**Preferred**
+- Preferred
 ```swift
 enum ErrorCode {
     
@@ -639,7 +640,7 @@ struct CacheOptions : OptionSetType {
     // ...
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 enum ErrorCode {
     
@@ -662,7 +663,7 @@ struct CacheOptions : OptionSetType {
 #### Variables and functions should be in *lowerCamelCase*, including statics and constants. An exception is acronyms, which should be *UPPERCASE*.
 *Adopt Apple's naming rules for uniformity. As for acronyms, the readability makes keeping them upper-case worth it.*
 
-**Preferred**
+- Preferred
 ```swift
 var webView: UIWebView?
 var URLString: String?
@@ -671,7 +672,7 @@ func didTapReloadButton() {
     // ..
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 var web_view: UIWebView?
 var urlString: String?
@@ -687,13 +688,13 @@ func DidTapReloadButton() {
 #### Avoid single-character names for types, variables, and functions. The only place they are allowed is as indexes in iterators.
 *There is always a better name than single-character names. Even with `i`, it is still more readable to use `index` instead.*
 
-**Preferred**
+- Preferred
 ```swift
 for (i, value) in array.enumerate() {
     // ... "i" is well known
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 for (i, v) in array.enumerate() {
     // ... what's "v"?
@@ -704,11 +705,11 @@ for (i, v) in array.enumerate() {
 #### Avoid abbreviations as much as possible. (although [Acceptable Abbreviations and Acronyms](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CodingGuidelines/Articles/APIAbbreviations.html#//apple_ref/doc/uid/20001285-BCIHCGAE) are allowed such as `min`/`max`). 
 *Clarity is prioritized over slight brevity.*
 
-**Preferred**
+- Preferred
 ```swift
 let errorCode = error.code
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 let err = error.code
 ```
@@ -716,7 +717,7 @@ let err = error.code
 #### Choose a name that communicates as much information about what it is and *what it's for*.
 *Clarity is prioritized over slight brevity. Also, the more specific the name, the less likely they are to collide with other symbols.*
 
-**Preferred**
+- Preferred
 ```swift
 class Article {
 
@@ -729,7 +730,7 @@ class NewsArticle {
     var headlineTitle: String
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 class Article {
 
@@ -742,7 +743,7 @@ class Article {
 #### When pertaining to URLs, distinguish strings from actual `NSURL`s by appending the suffix `~String`.
 *Saves a few seconds checking header declarations for the correct type.*
 
-**Preferred**
+- Preferred
 ```swift
 var requestURL: NSURL
 var sourceURLString: String
@@ -755,7 +756,7 @@ func loadURLString(URLString: String) {
     // ...
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 var requestURL: NSURL
 var sourceURL: String
@@ -773,7 +774,7 @@ func loadURL(URL: String) {
 #### Do not pertain to constructs (`class`, `struct`, `enum`, `protocol`, etc.) in their names.
 *The extra suffix is redundant. It should be noted though that Objective-C protocols with the same name as an existing Objective-C class are bridged to Swift with a `~Protocol` suffix (e.g. `NSObject` and `NSObjectProtocol`). But they are irrelevant to this guideline as they are automatically generated by the Swift compiler.*
 
-**Preferred**
+- Preferred
 ```swift
 class User {
     // ...
@@ -787,7 +788,7 @@ protocol Queryable {
     // ...
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 class UserClass {
     // ...
@@ -810,7 +811,7 @@ protocol QueryableProtocol {
 #### `import` statements for OS frameworks and external frameworks should be separated and alphabetized.
 *Reduce merge conflicts when dependencies change between branches.*
 
-**Preferred**
+- Preferred
 ```swift
 import Foundation
 import UIKit
@@ -819,7 +820,7 @@ import Alamofire
 import Cartography
 import SwiftyJSON
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 import Foundation
 import Alamofire
@@ -834,7 +835,7 @@ import Cartography
 #### All properties and methods should be grouped into the superclass/protocol they implement and should be tagged with `// MARK: <superclass/protocol name>`. The rest should be marked as either `// MARK: Public`, `// MARK: Internal`, or `// MARK: Private`.
 *Makes it easy to locate where in the source code certain properties and functions are declared.*
 
-**Preferred**
+- Preferred
 ```swift
 // MARK: - BaseViewController
 
@@ -874,7 +875,7 @@ class BaseViewController: UIViewController, UIScrollViewDelegate {
 #### All `// MARK:` tags should have two empty lines above and  one empty line below.
 *Aesthetic. Gives breathing room between type declarations and function groups.*
 
-**Preferred**
+- Preferred
 ```swift
 import UIKit
 
@@ -905,7 +906,7 @@ class BaseViewController: UIViewController {
     private var lastOffset = CGPoint.zero
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 import UIKit
 // MARK: - BaseViewController
@@ -966,7 +967,7 @@ In general, **all Xcode warnings should not be ignored**. These include things l
 #### Comments should be answering some form of "why?" question. Anything else should be explainable by the code itself, or not written at all.
 *The best comment is the ones you don't need. If you have to write one be sure to explain the rationale behind the code, not just to simply state the obvious.*
 
-**Preferred**
+- Preferred
 ```swift
 let leftMargin: CGFloat = 20
 view.frame.x = leftMargin
@@ -978,7 +979,7 @@ view.frame.x = leftMargin
     return 0.01 // tableView ignores 0
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 view.frame.x = 20 // left margin
 ```
@@ -994,11 +995,11 @@ view.frame.x = 20 // left margin
 #### All temporary, unlocalized strings should be marked with `// TODO: localize`
 *Features are usually debugged and tested in the native language and translated strings are usually tested separately. This guarantees that all unlocalized texts are accounted for and easy to find later on.*
 
-**Preferred**
+- Preferred
 ```swift
 self.titleLabel.text = "Date Today:" // TODO: localize
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 self.titleLabel.text = "Date Today:"
 ```
@@ -1010,13 +1011,13 @@ self.titleLabel.text = "Date Today:"
 #### All Objective-C `protocol` implementations, whether properties or methods, should be prefixed with `@objc dynamic`
 *Prevents horrible compiler optimization bugs.*
 
-**Preferred**
+- Preferred
 ```swift
 @objc dynamic func scrollViewDidScroll(scrollView: UIScrollView) {
     // ...
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 func scrollViewDidScroll(scrollView: UIScrollView) {
     // ...
@@ -1027,7 +1028,7 @@ func scrollViewDidScroll(scrollView: UIScrollView) {
 #### All `IBAction`s and `IBOutlet`s should be declared `dynamic`
 *Xcode automatically generates this for us when we drag&drop from storyboard to viewcontroller*
 
-**Preferred**
+- Preferred
 ```swift
 @IBOutlet private dynamic weak var closeButton: UIButton?
 
@@ -1040,11 +1041,11 @@ func scrollViewDidScroll(scrollView: UIScrollView) {
 #### All `@IBOutlet`s should be declared `weak`. They should also be wrapped as `Optional`, not `ImplicitlyUnwrappedOptional`.
 *This guarantees safety even if subclasses opt to not create the view for the `@IBOutlet`. This also protects against crashes caused by properties being accessed before `viewDidLoad(_:)`.*
 
-**Preferred**
+- Preferred
 ```swift
 @IBOutlet dynamic weak var profileIcon: UIImageView?
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 @IBOutlet var profileIcon: UIImageView!
 ```
@@ -1060,7 +1061,7 @@ func scrollViewDidScroll(scrollView: UIScrollView) {
 #### For library modules: all declarations should explicitly specify either `public`, `internal`, or `private`.
 *Makes the intent clear for API consumers.*
 
-**Preferred**
+- Preferred
 ```swift
 private let defaultTimeout: NSTimeInterval = 30
 
@@ -1068,7 +1069,7 @@ internal class NetworkRequest {
     // ...
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 let defaultTimeout: NSTimeInterval = 30
 
@@ -1081,7 +1082,7 @@ class NetworkRequest {
 #### For application modules: `public` access is prohibited unless required by a protocol. The `internal` keyword may or may not be written, but the `private` keyword is required.
 *A `public` declaration in an app bundle does not make sense. In effect, declarations are assumed to be either `internal` or `private`, in which case it is sufficient to just require `private` explicitly.*
 
-**Preferred**
+- Preferred
 ```swift
 private let someGlobal = "someValue"
 
@@ -1090,7 +1091,7 @@ class AppDelegate {
     private var isForeground = false
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 public let someGlobal = "someValue"
 
@@ -1104,7 +1105,7 @@ public class AppDelegate {
 #### Access modifiers should be written before all other non-`@` modifiers.
 Combined with the [rules on declaration order](#declaration-order), this improves readability when scanning code vertically*
 
-**Preferred**
+- Preferred
 ```swift
 @objc internal class User: NSManagedObject {
     // ...
@@ -1113,7 +1114,7 @@ Combined with the [rules on declaration order](#declaration-order), this improve
     @NSManaged private dynamic var internalCache: NSData?
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 internal @objc class User: NSManagedObject {
     // ...
@@ -1130,7 +1131,7 @@ internal @objc class User: NSManagedObject {
 #### Unless required, a variable/property declaration's type should be inferred from either the left or right side of the statement, but not both.
 *Prevent redundancy. This also reduces ambiguity when binding to generic types.*
 
-**Preferred**
+- Preferred
 ```swift
 var backgroundColor = UIColor.whiteColor()
 var iconView = UIImageView(image)
@@ -1140,7 +1141,7 @@ var lineBreakMode = NSLineBreakMode.ByWordWrapping
 // or
 var lineBreakMode: NSLineBreakMode = .ByWordWrapping
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 var backgroundColor: UIColor = UIColor.whiteColor()
 var iconView: UIImageView = UIImageView(image)
@@ -1153,12 +1154,12 @@ var lineBreakMode: NSLineBreakMode = NSLineBreakMode.ByWordWrapping
 #### When literal types are involved (`StringLiteralConvertible`, `NilLiteralConvertible`, etc), it is encouraged to specify the type explicitly and is preferrable over casting with `as` directly.
 *Prevent redundancy. This also reduces ambiguity when binding to generic types.*
 
-**Preferred**
+- Preferred
 ```swift
 var radius: CGFloat = 0
 var length = CGFloat(0)
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 var radius: CGFloat = CGFloat(0)
 var length = 0 as CGFloat // prefer initializer to casts
@@ -1167,7 +1168,7 @@ var length = 0 as CGFloat // prefer initializer to casts
 ## Collections / SequenceTypes
 
 #### `.count` should only be used when the count value itself is needed
-**Preferred**
+- Preferred
 ```swift
 let badgeNumber = unreadItems.count
 ```
@@ -1176,44 +1177,44 @@ let badgeNumber = unreadItems.count
 if sequence.isEmpty {
 // ...
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 if sequence.count <= 0 {
 // ...
 ```
 
 #### Getting the first or last item:
-**Preferred**
+- Preferred
 ```swift
 let first = sequence.first
 let last = sequence.last
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 let first = sequence[0]
 let last = sequence[sequence.count - 1]
 ```
 
 #### Removing the first or last item:
-**Preferred**
+- Preferred
 ```swift
 sequence.removeFirst()
 sequence.removeLast()
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 sequence.removeAtIndex(0)
 sequence.removeAtIndex(sequence.count - 1)
 ```
 
 #### Iterating all indexes:
-**Preferred**
+- Preferred
 ```swift
 for i in sequence.indices {
     // ...
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 for i in 0 ..< sequence.count {
     // ...
@@ -1221,25 +1222,25 @@ for i in 0 ..< sequence.count {
 ```
 
 #### Getting the first or last index:
-**Preferred**
+- Preferred
 ```swift
 let first = sequence.indices.first
 let last = sequence.indices.last
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 let first = 0
 let last = sequence.count - 1
 ```
 
 #### Iterating all indexes except the last `n` indexes:
-**Preferred**
+- Preferred
 ```swift
 for i in sequence.indices.dropLast(n) {
     // ...
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 for i in 0 ..< (sequence.count - n) {
     // ...
@@ -1247,13 +1248,13 @@ for i in 0 ..< (sequence.count - n) {
 ```
 
 #### Iterating all indexes except the first `n` indexes:
-**Preferred**
+- Preferred
 ```swift
 for i in sequence.indices.dropFirst(n) {
     // ...
 }
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 for i in n ..< sequence.count {
     // ...
@@ -1270,7 +1271,7 @@ In particular, this will cover the ever-debatable usage/non-usage of `self`.
 #### For all non-`@noescape` and non-animation closures, accessing `self` within the closure requires a `[weak self]` declaration.
 *Combined with the `self`-requirement rule above, retain cycle candidates are very easy to spot. Just look for closures that access `self` and check for the missing `[weak self]`. *
 
-**Preferred**
+- Preferred
 ```swift
 self.request.downloadImage(
     url,
@@ -1280,7 +1281,7 @@ self.request.downloadImage(
     }
 )
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 self.request.downloadImage(
     url,
@@ -1295,7 +1296,7 @@ self.request.downloadImage(
 #### Never use `unowned` to capture references in closures.
 *While `unowned` is more convenient (you don't need to work with an `Optional`) than `weak`, it is also more prone to crashes. Nobody likes zombies.*
 
-**Preferred**
+- Preferred
 ```swift
 self.request.downloadImage(
     url,
@@ -1305,7 +1306,7 @@ self.request.downloadImage(
     }
 )
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 self.request.downloadImage(
     url,
@@ -1320,7 +1321,7 @@ self.request.downloadImage(
 #### If the validity of the weak `self` in the closure is needed, bind using the variable `` `self` `` to shadow the original.
 *Write the nice looking code*
 
-**Preferred**
+- Preferred
 ```swift
 self.request.downloadImage(
     url,
@@ -1336,7 +1337,7 @@ self.request.downloadImage(
     }
 )
 ```
-**Not Preferred**
+- Not Preferred
 ```swift
 self.request.downloadImage(
     url,
