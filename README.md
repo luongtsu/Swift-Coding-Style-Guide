@@ -1357,3 +1357,7 @@ self.request.downloadImage(
 ---
 
 [Back to top](#table-of-contents)
+
+License
+-------
+See the [LICENSE](https://github.com/luongtsu/Swift-Coding-Style-Guide/blob/master/LICENSE) file for more info.
