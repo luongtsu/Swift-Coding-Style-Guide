@@ -39,7 +39,7 @@ The aim of this guide is to help developers in writing clean, concise, beautiful
 ### Semicolons
 
 #### Trailing semicolons (`;`) are not nessesary any more. 
-*This is Swift*
+***Cause:** This is Swift*
 
 - Preferred
 ```swift
@@ -65,7 +65,7 @@ Tab setting could be set at Xcode's **Text Editing** settings. As following:
 
 
 #### All source files should end with a single trailing newline (only).
-*This prevents no-trailing-newline errors and reduces noise in commit diffs.*
+***Cause:** This prevents no-trailing-newline errors and reduces noise in commit diffs.*
 
 - Preferred
 ```swift
@@ -90,7 +90,7 @@ class Button {
 
 
 #### All functions should be at least one empty line apart each other.
-*Gives breathing room between code blocks.*
+***Cause:** Gives breathing room between code blocks.*
 
 - Preferred
 ```swift
@@ -109,7 +109,7 @@ class BaseViewController: UIViewController {
 
 
 #### Use single spaces around operator definitions and operator calls.
-*Readability*
+***Cause:** Readability*
 
 - Preferred
 ```swift
@@ -130,7 +130,7 @@ let value = 1<|2
 
 
 #### Use single spaces around return arrows (`->`) both in functions and in closures.
-*Readability*
+***Cause:** Readability*
 
 - Preferred
 ```swift
@@ -149,7 +149,7 @@ func doSomething(value: Int)->Int {
 ### Commas
 
 #### Commas (`,`) should have no whitespace before it, and should have either one space or one newline after.
-*Keeps comma-separated items visually separate.*
+***Cause:** Keeps comma-separated items visually separate.*
 
 - Preferred
 ```swift
@@ -179,7 +179,7 @@ self.presentViewController(
 ### Colons
 
 #### Colons (`:`) used to indicate type should have one space after it and should have no whitespace before it.
-*The colon describes the object to its left, not the right.*
+***Cause:** The colon describes the object to its left, not the right.*
 
 - Preferred
 ```swift
@@ -202,7 +202,7 @@ var item : Item? = nil
 
 
 #### Colons (`:`) for `case` statements should have no whitespace before it, and should have either one space or one newline after it.
-*Same as he previous rule, the colon describes the object to its left, not the right.*
+***Cause:** Same as he previous rule, the colon describes the object to its left, not the right.*
 
 - Preferred
 ```swift
@@ -230,7 +230,7 @@ case .Failure:self.reportError()
 ### Braces
 
 #### Open braces (`{`) should be one space following the previous non-whitespace character.
-*Separates the brace from the declaration.*
+***Cause:** Separates the brace from the declaration.*
 
 - Preferred
 ```swift
@@ -257,7 +257,7 @@ let block ={ () -> Void in
 
 
 #### Open braces (`{`) for type declarations, functions, and closures should be followed by one empty line. Single-statement closures can be written in one line.
-*Gives breathing room when scanning for code.*
+***Cause:** Gives breathing room when scanning for code.*
 
 - Preferred
 ```swift
@@ -294,7 +294,7 @@ class Icon {
 
 
 #### Empty declarations should be written in empty braces (`{}`), otherwise a comment should indicate the reason for the empty implementation.
-*Makes it clear that the declaration was meant to be empty and not just a missing `TODO`.*
+***Cause:** Makes it clear that the declaration was meant to be empty and not just a missing `TODO`.*
 
 - Preferred
 ```swift
@@ -327,7 +327,7 @@ override func drawRect(rect: CGRect) {
 ```
 
 #### Close braces (`}`) should not have empty lines before it. For single line expressions enclosed in braces, there should be one space between the last statement and the closing brace.
-*Provides breathing room between declarations while keeping code compact.*
+***Cause:** Provides breathing room between declarations while keeping code compact.*
 
 - Preferred
 ```swift
@@ -358,7 +358,7 @@ class Button {
 
 
 #### Close braces (`}`) unless on the same line as its corresponding open brace (`{`), should be left-aligned with the statement that declared the open brace.
-*Close braces left-aligned with their opening statements visually express their scopes pretty well. This rule is the basis for the succeeding formatting guidelines below.*
+***Cause:** Close braces left-aligned with their opening statements visually express their scopes pretty well. This rule is the basis for the succeeding formatting guidelines below.*
 
 - Preferred
 ```swift
@@ -381,7 +381,7 @@ lazy var largeImage: UIImage = { () -> UIImage in
 ### Properties
 
 #### The `get` and `set` statement and their close braces (`}`) should all be left-aligned. If the statement in the braces can be expressed in a single line, the `get` and `set` declaration can be inlined.
-*Combined with the [rules on braces](#braces), this formatting provides very good consistency and scannability.*
+***Cause:** Combined with the [rules on braces](#braces), this formatting provides very good consistency and scannability.*
 
 - Preferred
 ```swift
@@ -446,7 +446,7 @@ struct Rectangle {
 
 
 #### Read-only computed properties should ommit the `get` clause.
-*The `return` statement provides enough clarity that lets us use the more compact form.*
+***Cause:** The `return` statement provides enough clarity that lets us use the more compact form.*
 
 - Preferred
 ```swift
@@ -478,7 +478,7 @@ struct Rectangle {
 ### Control Flow Statements
 
 #### `if`, `else`, `switch`, `do`, `catch`, `repeat`, `guard`, `for`, `while`, and `defer` statements should be left-aligned with their respective close braces (`}`).
-*Combined with the [rules on braces](#braces), this formatting provides very good consistency and scannability. Close braces left-aligned with their respective control flow statements visually express their scopes pretty well.*
+***Cause:** Combined with the [rules on braces](#braces), this formatting provides very good consistency and scannability. Close braces left-aligned with their respective control flow statements visually express their scopes pretty well.*
 
 - Preferred
 ```swift
@@ -512,7 +512,7 @@ else
 
 
 #### `case` statements should be left-aligned with the `switch` statement. Single-line `case` statements can be inlined and written compact. Multi-line `case` statements should be indented below `case:` and separated with one empty line.
-*Reliance on Xcode's auto-indentation. For multi-line statements, separating `case`s with empty lines enhance visual separation.*
+***Cause:** Reliance on Xcode's auto-indentation. For multi-line statements, separating `case`s with empty lines enhance visual separation.*
 
 - Preferred
 ```swift
@@ -554,7 +554,7 @@ switch result {
 
 
 #### Conditions for `if`, `switch`, `for`, and `while` statements should not be enclosed in parentheses (`()`).
-*Do coding Swift way*
+***Cause:** Do coding Swift way*
 
 - Preferred
 ```swift
@@ -570,7 +570,7 @@ if (array.isEmpty) {
 ``` 
 
 #### Try to avoid nesting statements by `return`ing early when possible.
-*The more nested scopes to keep track of, the heavier the burden of scanning code.*
+***Cause:** The more nested scopes to keep track of, the heavier the burden of scanning code.*
 
 - Preferred
 ```swift
@@ -597,7 +597,7 @@ Naming rules are mostly based on Apple's naming conventions, since we'll end up 
 ### Capitalization
 
 #### Type names (`class`, `struct`, `enum`, `protocol`) should be in *UpperCamelCase*. 
-*Adopt Apple's naming rules for uniformity.*
+***Cause:** Adopt Apple's naming rules for uniformity.*
 
 - Preferred
 ```swift
@@ -620,7 +620,7 @@ class image_button {
 
 
 #### `enum` values and `OptionSetType` values should be in *UpperCamelCase*. 
-*Adopt Apple's naming rules for uniformity.*
+***Cause:** Adopt Apple's naming rules for uniformity.*
 
 - Preferred
 ```swift
@@ -661,7 +661,7 @@ struct CacheOptions : OptionSetType {
 
 
 #### Variables and functions should be in *lowerCamelCase*, including statics and constants. An exception is acronyms, which should be *UPPERCASE*.
-*Adopt Apple's naming rules for uniformity. As for acronyms, the readability makes keeping them upper-case worth it.*
+***Cause:** Adopt Apple's naming rules for uniformity. As for acronyms, the readability makes keeping them upper-case worth it.*
 
 - Preferred
 ```swift
@@ -686,7 +686,7 @@ func DidTapReloadButton() {
 ### Semantics
 
 #### Avoid single-character names for types, variables, and functions. The only place they are allowed is as indexes in iterators.
-*There is always a better name than single-character names. Even with `i`, it is still more readable to use `index` instead.*
+***Cause:** There is always a better name than single-character names. Even with `i`, it is still more readable to use `index` instead.*
 
 - Preferred
 ```swift
@@ -703,7 +703,7 @@ for (i, v) in array.enumerate() {
 
 
 #### Avoid abbreviations as much as possible. (although [Acceptable Abbreviations and Acronyms](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CodingGuidelines/Articles/APIAbbreviations.html#//apple_ref/doc/uid/20001285-BCIHCGAE) are allowed such as `min`/`max`). 
-*Clarity is prioritized over slight brevity.*
+***Cause:** Clarity is prioritized over slight brevity.*
 
 - Preferred
 ```swift
@@ -715,7 +715,7 @@ let err = error.code
 ```
 
 #### Choose a name that communicates as much information about what it is and *what it's for*.
-*Clarity is prioritized over slight brevity. Also, the more specific the name, the less likely they are to collide with other symbols.*
+***Cause:** Clarity is prioritized over slight brevity. Also, the more specific the name, the less likely they are to collide with other symbols.*
 
 - Preferred
 ```swift
@@ -741,7 +741,7 @@ class Article {
 
 
 #### When pertaining to URLs, distinguish strings from actual `NSURL`s by appending the suffix `~String`.
-*Saves a few seconds checking header declarations for the correct type.*
+***Cause:** Saves a few seconds checking header declarations for the correct type.*
 
 - Preferred
 ```swift
@@ -772,7 +772,7 @@ func loadURL(URL: String) {
 
 
 #### Do not pertain to constructs (`class`, `struct`, `enum`, `protocol`, etc.) in their names.
-*The extra suffix is redundant. It should be noted though that Objective-C protocols with the same name as an existing Objective-C class are bridged to Swift with a `~Protocol` suffix (e.g. `NSObject` and `NSObjectProtocol`). But they are irrelevant to this guideline as they are automatically generated by the Swift compiler.*
+***Cause:** The extra suffix is redundant. It should be noted though that Objective-C protocols with the same name as an existing Objective-C class are bridged to Swift with a `~Protocol` suffix (e.g. `NSObject` and `NSObjectProtocol`). But they are irrelevant to this guideline as they are automatically generated by the Swift compiler.*
 
 - Preferred
 ```swift
@@ -809,7 +809,7 @@ protocol QueryableProtocol {
 ### Import Statements
 
 #### `import` statements for OS frameworks and external frameworks should be separated and alphabetized.
-*Reduce merge conflicts when dependencies change between branches.*
+***Cause:** Reduce merge conflicts when dependencies change between branches.*
 
 - Preferred
 ```swift
@@ -833,7 +833,7 @@ import Cartography
 ## Declaration 
 
 #### All properties and methods should be grouped into the superclass/protocol they implement and should be tagged with `// MARK: <superclass/protocol name>`. The rest should be marked as either `// MARK: Public`, `// MARK: Internal`, or `// MARK: Private`.
-*Makes it easy to locate where in the source code certain properties and functions are declared.*
+***Cause:** Makes it easy to locate where in the source code certain properties and functions are declared.*
 
 - Preferred
 ```swift
@@ -873,7 +873,7 @@ class BaseViewController: UIViewController, UIScrollViewDelegate {
 
 
 #### All `// MARK:` tags should have two empty lines above and  one empty line below.
-*Aesthetic. Gives breathing room between type declarations and function groups.*
+***Cause:** Aesthetic. Gives breathing room between type declarations and function groups.*
 
 - Preferred
 ```swift
@@ -931,7 +931,7 @@ class BaseViewController: UIViewController {
 
 
 #### The groupings for `// MARK:` tags should be ordered as follows:
-*Makes it easy to locate where in the source code certain implementations are declared. `public` and `internal` declarations are more likely to be referred to by API consumers, so are declared at the top.*
+***Cause:** Makes it easy to locate where in the source code certain implementations are declared. `public` and `internal` declarations are more likely to be referred to by API consumers, so are declared at the top.*
 - `// MARK: Public`
 - `// MARK: Internal`
 - Class Inheritance (parent-most to child-most)
@@ -965,7 +965,7 @@ In general, **all Xcode warnings should not be ignored**. These include things l
 ## Comments
 
 #### Comments should be answering some form of "why?" question. Anything else should be explainable by the code itself, or not written at all.
-*The best comment is the ones you don't need. If you have to write one be sure to explain the rationale behind the code, not just to simply state the obvious.*
+***Cause:** The best comment is the ones you don't need. If you have to write one be sure to explain the rationale behind the code, not just to simply state the obvious.*
 
 - Preferred
 ```swift
@@ -993,7 +993,7 @@ view.frame.x = 20 // left margin
 
 
 #### All temporary, unlocalized strings should be marked with `// TODO: localize`
-*Features are usually debugged and tested in the native language and translated strings are usually tested separately. This guarantees that all unlocalized texts are accounted for and easy to find later on.*
+***Cause:** Features are usually debugged and tested in the native language and translated strings are usually tested separately. This guarantees that all unlocalized texts are accounted for and easy to find later on.*
 
 - Preferred
 ```swift
@@ -1009,7 +1009,7 @@ self.titleLabel.text = "Date Today:"
 ## Protection from Dynamism
 
 #### All Objective-C `protocol` implementations, whether properties or methods, should be prefixed with `@objc dynamic`
-*Prevents horrible compiler optimization bugs.*
+***Cause:** Prevents horrible compiler optimization bugs.*
 
 - Preferred
 ```swift
@@ -1026,7 +1026,7 @@ func scrollViewDidScroll(scrollView: UIScrollView) {
 
 
 #### All `IBAction`s and `IBOutlet`s should be declared `dynamic`
-*Xcode automatically generates this for us when we drag&drop from storyboard to viewcontroller*
+***Cause:** Xcode automatically generates this for us when we drag&drop from storyboard to viewcontroller*
 
 - Preferred
 ```swift
@@ -1039,7 +1039,7 @@ func scrollViewDidScroll(scrollView: UIScrollView) {
 
 
 #### All `@IBOutlet`s should be declared `weak`. They should also be wrapped as `Optional`, not `ImplicitlyUnwrappedOptional`.
-*This guarantees safety even if subclasses opt to not create the view for the `@IBOutlet`. This also protects against crashes caused by properties being accessed before `viewDidLoad(_:)`.*
+***Cause:** This guarantees safety even if subclasses opt to not create the view for the `@IBOutlet`. This also protects against crashes caused by properties being accessed before `viewDidLoad(_:)`.*
 
 - Preferred
 ```swift
@@ -1055,11 +1055,11 @@ func scrollViewDidScroll(scrollView: UIScrollView) {
 ## Access Modifiers
 
 #### Design declarations as `private` by default and only expose as `internal` or `public` as the needs arise.
-*This helps prevent pollution of XCode's auto-completion. In theory this should also help the compiler make better optimizations and build faster.*
+***Cause:** This helps prevent pollution of XCode's auto-completion. In theory this should also help the compiler make better optimizations and build faster.*
 
 
 #### For library modules: all declarations should explicitly specify either `public`, `internal`, or `private`.
-*Makes the intent clear for API consumers.*
+***Cause:** Makes the intent clear for API consumers.*
 
 - Preferred
 ```swift
@@ -1080,7 +1080,7 @@ class NetworkRequest {
 
 
 #### For application modules: `public` access is prohibited unless required by a protocol. The `internal` keyword may or may not be written, but the `private` keyword is required.
-*A `public` declaration in an app bundle does not make sense. In effect, declarations are assumed to be either `internal` or `private`, in which case it is sufficient to just require `private` explicitly.*
+***Cause:** A `public` declaration in an app bundle does not make sense. In effect, declarations are assumed to be either `internal` or `private`, in which case it is sufficient to just require `private` explicitly.*
 
 - Preferred
 ```swift
@@ -1129,7 +1129,7 @@ internal @objc class User: NSManagedObject {
 ## Type Inference
 
 #### Unless required, a variable/property declaration's type should be inferred from either the left or right side of the statement, but not both.
-*Prevent redundancy. This also reduces ambiguity when binding to generic types.*
+***Cause:** Prevent redundancy. This also reduces ambiguity when binding to generic types.*
 
 - Preferred
 ```swift
@@ -1152,7 +1152,7 @@ var lineBreakMode: NSLineBreakMode = NSLineBreakMode.ByWordWrapping
 
 
 #### When literal types are involved (`StringLiteralConvertible`, `NilLiteralConvertible`, etc), it is encouraged to specify the type explicitly and is preferrable over casting with `as` directly.
-*Prevent redundancy. This also reduces ambiguity when binding to generic types.*
+***Cause:** Prevent redundancy. This also reduces ambiguity when binding to generic types.*
 
 - Preferred
 ```swift
@@ -1294,7 +1294,7 @@ self.request.downloadImage(
 
 
 #### Never use `unowned` to capture references in closures.
-*While `unowned` is more convenient (you don't need to work with an `Optional`) than `weak`, it is also more prone to crashes. Nobody likes zombies.*
+***Cause:** While `unowned` is more convenient (you don't need to work with an `Optional`) than `weak`, it is also more prone to crashes. Nobody likes zombies.*
 
 - Preferred
 ```swift
@@ -1319,7 +1319,7 @@ self.request.downloadImage(
 
 
 #### If the validity of the weak `self` in the closure is needed, bind using the variable `` `self` `` to shadow the original.
-*Write the nice looking code*
+***Cause:** Write the nice looking code*
 
 - Preferred
 ```swift
